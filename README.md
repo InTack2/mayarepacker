@@ -1,4 +1,4 @@
-# maya-auto-package-reloader
+# mayarepacker
 Automatic package reloader for Maya.
 
 ## Features
