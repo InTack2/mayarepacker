@@ -138,14 +138,5 @@ class GUILogHandler(logging.Handler):
         else:
             msg = ""
 
-        # self.createLock()
-
-        # self.acquire()
-
         maya.utils.executeInMainThreadWithResult(partial(self.plain_text_edit.verticalScrollBar().setValue, self.plain_text_edit.verticalScrollBar().maximum()))
         maya.utils.executeInMainThreadWithResult(partial(self.plain_text_edit.appendPlainText, msg))
-        # self.plain_text_edit.appendPlainText(msg)
-        # self.plain_text_edit.verticalScrollBar().setValue(self.plain_text_edit.verticalScrollBar().maximum())
-        # self.plain_text_edit.update()
-
-        # self.release()

@@ -12,8 +12,6 @@ def remove_include_module(name):
     module_list = [_ for _ in sys.modules]
     module_list.sort()
 
-    # send_message_list = []
-    # send_message_list.append("================================================")
     logger.info("================================================")
 
     first_hit_parent_module = None
@@ -28,13 +26,6 @@ def remove_include_module(name):
 
     if first_hit_parent_module:
         exec("import {}".format(first_hit_parent_module))
-        # send_message_list.append("reloaded : {}".format(first_hit_parent_module))
         logger.info("reloaded : {}".format(first_hit_parent_module))
 
-    # send_message_list.append("================================================")
     logger.info("================================================")
-
-    # send_message_list.reverse()
-
-    # for send_message in send_message_list:
-    #     maya.utils.executeDeferred(partial(logger.info, send_message))
