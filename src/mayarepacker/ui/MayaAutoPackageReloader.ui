@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>544</width>
-    <height>420</height>
+    <width>498</width>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,6 +19,9 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLineEdit" name="PathLineEdit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -26,12 +29,52 @@
       </item>
       <item>
        <widget class="QPushButton" name="OpenFolderButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="text">
          <string>📁</string>
         </property>
        </widget>
       </item>
      </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Reload Target; </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="ReloadTargetBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="ManualReloadButton">
+      <property name="text">
+       <string>Manual Reload</string>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="StartMonitorButton">
@@ -51,7 +94,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QListView" name="ConsoleListView"/>
+     <widget class="QPlainTextEdit" name="ConsoleTextEdit"/>
     </item>
    </layout>
   </widget>
@@ -60,7 +103,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>544</width>
+     <width>498</width>
      <height>21</height>
     </rect>
    </property>

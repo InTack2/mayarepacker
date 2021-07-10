@@ -5,6 +5,13 @@ from __future__ import absolute_import
 from __future__ import generators
 from __future__ import division
 
+import logging
+
 from .controller import main
 
-__version__ = '0.0.3'
+
+__version__ = '0.0.4'
+
+logger = logging.getLogger("mayarepacker")
+logger.setLevel(logging.DEBUG)
+logger.propagate = False
