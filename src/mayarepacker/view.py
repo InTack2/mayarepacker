@@ -13,9 +13,18 @@ from PySide2.QtUiTools import QUiLoader
 from maya.app.general import mayaMixin
 from maya import cmds
 
-from PySide2 import QtWidgets
+from PySide2 import QtWidgets, QtCore
 
 CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
+
+settings_path = None
+if os.name == "nt":
+    settings_path = os.environ["APPDATA"]
+else:
+    settting_path = "library/preferences"
+
+
+SETTING_CURRENT_PATH = settting_path
 
 
 class View(mayaMixin.MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
@@ -25,3 +34,23 @@ class View(mayaMixin.MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
         self.setCentralWidget(self.ui)
         self.setWindowTitle(self.ui.windowTitle())
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+
+        self.settings = QtCore.QSettings(os.path.join(SETTING_CURRENT_PATH, "setting.ini"), QtCore.QSettings.IniFormat)
+
+    def showEvent(self, event):
+        super(View, self).showEvent(event)
+
+        self.__load_settings()
+
+    def closeEvent(self, event):
+        super(View, self).closeEvent(event)
+
+        self.__save_settings()
+
+    def __load_settings(self):
+        self.ui.ReloadTargetBox.setCurrentText(self.settings.value(self.ui.ReloadTargetBox.objectName(), ""))
+        self.ui.PathLineEdit.setText(self.settings.value(self.ui.PathLineEdit.objectName(), ""))
+
+    def __save_settings(self):
+        self.settings.setValue(self.ui.ReloadTargetBox.objectName(), self.ui.ReloadTargetBox.currentText())
+        self.settings.setValue(self.ui.PathLineEdit.objectName(), self.ui.PathLineEdit.text())

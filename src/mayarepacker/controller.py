@@ -45,6 +45,9 @@ class Controller(object):
 
     def select_folder_dialog(self):
         select_path = cmds.fileDialog2(dialogStyle=2, fileMode=3)[0]
+        if not select_path:
+            return
+            
         self.gui.ui.PathLineEdit.setText(select_path)
 
     def start_monitor(self):

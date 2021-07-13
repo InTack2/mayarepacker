@@ -12,33 +12,33 @@ Automatic package reloader for Maya.
 ## Features
 This repository is a feature that makes it easy for TechnicalArtists to hot-load their tools when they create them in Maya.
 
-Gifを入れる
+(Gif)
 
-## 導入方法
-pipでインストールしてください。
-`pip install mayarepacker`を実行
+## How to install
+Install it with pip.
+Run `pip install mayarepacker`.
 
-Mayaのコンソールで以下実行で起動できます。
-適宜、シェルフに登録などしてご利用ください。
-```python
+You can start it by running the following in the Maya console.
+Register it on the shelf and use it as needed.
+``` python
 import mayarepacker
 mayarepacker.main()
 ```
 
 ## Usage
-mayarepackerには下記の2つのモードがあります。
-- 自動リロード
-  - フォルダを指定し、そのフォルダ以下のPythonファイルに更新があった場合に指定パッケージをリロードする。
-- 手動リロード
-  - 指定パッケージをリロードする
+There are two modes of mayarepacker
+- Automatic reload
+  - Specify a folder and mayarepacker will reload the specified package when there is an update to the Python files under that folder.
+- Manual reload
+  - Reloads the specified package.
 
-### 手動リロード
-- リロード対象を指定
-- ボタンを押す
+### Manual Reload
+- Specify the reload target
+- Click the reload button.
 
-### 自動リロード
-- 監視するフォルダを指定する
-- 更新があった時のリロード対象を選択
-- 監視を開始
-- 更新等した時に自動で更新されている事を確認
-- 監視を終了したい時はStopボタンを押すかツールを閉じる事で可能。
+### Auto Reload
+- Specify the folder to monitor
+- Select the target to reload when there is an update
+- Start monitoring
+- Confirm that the file is automatically updated when it is updated.
+- If you want to stop the monitoring, you can click the Stop button or close the tool.
