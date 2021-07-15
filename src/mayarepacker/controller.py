@@ -38,6 +38,9 @@ class Controller(object):
         self.gui.ui.EndMonitorButton.clicked.connect(self.end_monitor)
         self.gui.ui.ManualReloadButton.clicked.connect(self.reload_manual)
 
+        self.gui.ui.ConsoleTextEdit.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+        self.gui.ui.ConsoleTextEdit.customContextMenuRequested.connect(self.clear_console)
+
         self.__update_completer()
 
         self._filter = Filter(self.end_monitor, self.__update_completer)
@@ -47,7 +50,7 @@ class Controller(object):
         select_path = cmds.fileDialog2(dialogStyle=2, fileMode=3)[0]
         if not select_path:
             return
-            
+
         self.gui.ui.PathLineEdit.setText(select_path)
 
     def start_monitor(self):
@@ -99,6 +102,9 @@ class Controller(object):
             return
 
         app.remove_include_module(target_module)
+
+    def clear_console(self):
+        self.gui.ui.ConsoleTextEdit.clear()
 
 
 class Filter(QtCore.QObject):
