@@ -7,13 +7,10 @@ from __future__ import division
 
 import os
 
-from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2 import QtCore, QtWidgets
 from PySide2.QtUiTools import QUiLoader
 
 from maya.app.general import mayaMixin
-from maya import cmds
-
-from PySide2 import QtWidgets, QtCore
 
 CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,10 +18,10 @@ settings_path = None
 if os.name == "nt":
     settings_path = os.environ["APPDATA"]
 else:
-    settting_path = "library/preferences"
+    settings_path = "library/preferences"
 
 
-SETTING_CURRENT_PATH = settting_path
+SETTING_CURRENT_PATH = settings_path
 
 
 class View(mayaMixin.MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
