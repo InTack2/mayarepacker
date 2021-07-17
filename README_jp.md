@@ -15,10 +15,10 @@ Maya の自動パッケージリローダ.
 このリポジトリは、TechnicalArtistがMayaでツールを作成する際に、簡単にホットロードするための機能です。
 モニタリングを開始すると、指定したフォルダ配下のpythonFileが更新されると、指定したPackageがリロードされます。 
 
-![AutoReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/AutoReload.gif)
+[![Image from Gyazo](https://i.gyazo.com/b7d1c54e6e51d4092a16d5c8b9e36637.gif)](https://gyazo.com/b7d1c54e6e51d4092a16d5c8b9e36637)
 
 It is also possible to manually reload at any time.  
-![ManualReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/ManualReload.gif)
+[![Image from Gyazo](https://i.gyazo.com/ed5358930ec629c33af9e9cfce2c0d9e.gif)](https://gyazo.com/ed5358930ec629c33af9e9cfce2c0d9e)
 
 
 ## 導入方法
@@ -53,9 +53,9 @@ mayarepackerには下記の2つのモードがあります。
 ## サポート
 〇・・動作確認済み
 ？・・未確認
-| Maya Verison | Windows | Mac |
-| ------------ | ------- | --- |
-| 2018         | 〇      | 〇  |
-| 2019         | ？      | ？  |
-| 2020         | 〇      | 〇  |
-| 2022         | 〇      | 〇  |
+| Maya Verison | Windows | Mac |  
+| ------------ | ------- | --- |  
+| 2018         | 〇      | 〇  |  
+| 2019         | ？      | ？  |  
+| 2020         | 〇      | 〇  |  
+| 2022         | 〇      | 〇  |  

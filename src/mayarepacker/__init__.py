@@ -10,7 +10,7 @@ import logging
 from .controller import main
 
 
-__version__ = '0.0.7'
+__version__ = '1.0.1'
 
 logger = logging.getLogger("mayarepacker")
 logger.setLevel(logging.DEBUG)
