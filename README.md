@@ -10,9 +10,12 @@
 Automatic package reloader for Maya.
 
 ## Features
-This repository is a feature that makes it easy for TechnicalArtists to hot-load their tools when they create them in Maya.
+This repository is a feature that makes it easy to hot-load their tools when they create them in Maya.  
+When monitoring is started, the specified Packge will be reloaded when the pythonFile under the specified folder is updated.  
+![AutoReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/AutoReload.gif)
 
-(Gif)
+It is also possible to manually reload at any time.  
+![ManualReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/ManualReload.gif)
 
 ## How to install
 Install it with pip.
