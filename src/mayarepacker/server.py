@@ -20,7 +20,6 @@ from . import app
 class ReloadServer(object):
     def __init__(self):
         self.observer = None
-
         self.is_monitor = False
 
     def start(self, target_path, target_module):
@@ -30,14 +29,10 @@ class ReloadServer(object):
         self.observer.start()
         self.is_monitor = True
 
-        try:
-            while self.is_monitor:
-                time.sleep(3)
-        finally:
-            self.observer.stop()
-            self.observer.join()
-
     def stop(self):
+        self.observer.stop()
+        self.observer.join()
+
         self.is_monitor = False
 
 
@@ -56,7 +51,3 @@ class MayaModuleReloadEventhandler(PatternMatchingEventHandler):
         self.logger.info("================================================")
 
         app.remove_include_module(self.reload_target_name)
-
-
-class SingletonMultiInstanceError(Exception):
-    pass
