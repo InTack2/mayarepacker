@@ -13,7 +13,7 @@ from functools import partial
 from . import view
 from . import server
 
-from PySide2 import QtCore, QtWidgets
+from PySide2 import QtCore
 
 from maya import cmds
 

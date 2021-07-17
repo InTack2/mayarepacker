@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""サーバー関連
-
+"""watchdog server.
 """
 from __future__ import print_function
 from __future__ import unicode_literals
@@ -8,8 +7,6 @@ from __future__ import absolute_import
 from __future__ import generators
 from __future__ import division
 import logging
-
-import time
 
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler

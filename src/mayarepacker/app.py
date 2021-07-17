@@ -1,10 +1,6 @@
 import logging
 import sys
 
-import maya
-
-from functools import partial
-
 
 def remove_include_module(name):
     logger = logging.getLogger("mayarepacker")
