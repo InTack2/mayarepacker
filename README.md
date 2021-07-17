@@ -8,10 +8,11 @@
 [![code style](https://img.shields.io/badge/code%20style-flake8-000000.svg)](https://pypi.org/-project/flake8/)  
 
 Automatic package reloader for Maya.
+[README Japanese version](https://github.com/InTack2/mayarepacker/blob/main//README_jp.md)
 
 ## Features
 This repository is a feature that makes it easy to hot-load their tools when they create them in Maya.  
-When monitoring is started, the specified Packge will be reloaded when the pythonFile under the specified folder is updated.  
+When monitoring is started, the specified Package will be reloaded when the pythonFile under the specified folder is updated.  
 ![AutoReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/AutoReload.gif)
 
 It is also possible to manually reload at any time.  
@@ -45,3 +46,13 @@ There are two modes of mayarepacker
 - Start monitoring
 - Confirm that the file is automatically updated when it is updated.
 - If you want to stop the monitoring, you can click the Stop button or close the tool.
+
+## Support
+〇・・confirmed operation.
+？・・Not tested.
+| Maya Verison | Windows | Mac |
+| ------------ | ------- | --- |
+| 2018         | 〇      | ？  |
+| 2019         | ？      | ？  |
+| 2020         | 〇      | 〇  |
+| 2022         | 〇      | ？  |

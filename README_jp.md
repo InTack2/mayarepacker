@@ -7,12 +7,19 @@
 [![pytest](https://codecov.io/gh/InTack2/mayarepacker/branch/master/graph/badge.svg)](https://codecov.io/gh/InTack2/mayarepacker)
 [![code style](https://img.shields.io/badge/code%20style-flake8-000000.svg)](https://pypi.org/-project/flake8/)  
 
-Automatic package reloader for Maya.
+Maya の自動パッケージリローダ.
+
+[README 英語版](https://github.com/InTack2/mayarepacker/blob/main//README.md)  
 
 ## Features
 このリポジトリは、TechnicalArtistがMayaでツールを作成する際に、簡単にホットロードするための機能です。
+モニタリングを開始すると、指定したフォルダ配下のpythonFileが更新されると、指定したPackageがリロードされます。 
 
-(Gif)
+![AutoReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/AutoReload.gif)
+
+It is also possible to manually reload at any time.  
+![ManualReload.git](https://github.com/InTack2/mayarepacker/blob/main/images/ManualReload.gif)
+
 
 ## 導入方法
 pipでインストールしてください。
@@ -42,3 +49,13 @@ mayarepackerには下記の2つのモードがあります。
 - 監視を開始
 - 更新等した時に自動で更新されている事を確認
 - 監視を終了したい時はStopボタンを押すかツールを閉じる事で可能。
+
+## サポート
+〇・・動作確認済み
+？・・未確認
+| Maya Verison | Windows | Mac |
+| ------------ | ------- | --- |
+| 2018         | 〇      | 〇  |
+| 2019         | ？      | ？  |
+| 2020         | 〇      | 〇  |
+| 2022         | 〇      | 〇  |
