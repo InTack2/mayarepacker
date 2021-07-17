@@ -32,6 +32,9 @@ class View(mayaMixin.MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
         self.setWindowTitle(self.ui.windowTitle())
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 
+        self.comp = QtWidgets.QCompleter(self)
+        self.comp.setCompletionMode(QtWidgets.QCompleter.UnfilteredPopupCompletion)
+
         self.settings = QtCore.QSettings(os.path.join(SETTING_CURRENT_PATH, "setting.ini"), QtCore.QSettings.IniFormat)
 
     def showEvent(self, event):
