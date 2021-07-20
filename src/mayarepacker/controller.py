@@ -15,6 +15,11 @@ from . import server
 
 from PySide2 import QtCore
 
+try:
+    from PySide2.QtCore import QStringListModel
+except ImportError:
+    from PySide2.QtGui import QStringListModel
+
 from maya import cmds
 
 
@@ -94,7 +99,7 @@ class Controller(object):
             self.gui.ui.ReloadTargetBox.addItems(target_completer)
             self.gui.ui.ReloadTargetBox.setCurrentText(current_text)
 
-            self.gui.comp.setModel(QtCore.QStringListModel(target_completer))
+            self.gui.comp.setModel(QStringListModel(target_completer))
             self.gui.ui.ReloadTargetBox.setCompleter(self.gui.comp)
 
     def reload_manual(self):

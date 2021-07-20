@@ -50,9 +50,17 @@ There are two modes of mayarepacker
 ## Support
 〇・・confirmed operation.  
 ？・・Not tested.  
-| Maya Verison | Windows | Mac |  
-| ------------ | ------- | --- |  
-| 2018         | 〇      | ？  |  
-| 2019         | ？      | ？  |  
-| 2020         | 〇      | 〇  |  
-| 2022         | 〇      | ？  |  
+| Maya Verison | Windows | Mac |
+| ------------ | ------- | --- |
+| 2018         | 〇      | ？  |
+| 2019         | ？      | ？  |
+| 2020         | 〇      | 〇  |
+| 2022         | 〇      | ？  |
+
+## release
+
+- 1.0.2
+  - Fixed an issue that prevented Maya2018 from starting properly due to QStringModel.
+
+- 1.0.0
+  - Initial release.
